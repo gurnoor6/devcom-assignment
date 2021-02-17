@@ -1,0 +1,13 @@
+table,tr,th,td{
+	border: 1px solid grey !important;
+}
+
+tr,th,td{
+	padding: 4px 10px;
+}
+
+.table-div{
+	display: flex !important;
+	justify-content: center !important;
+	height: 300px;
+}

@@ -62,9 +62,10 @@ export class SalesOverviewGrapComponent implements OnInit {
   		// this.api.get("http://api.marketstack.com/v1/eod?access_key=4f0a067e31a165f5768cbfce1b9c3760&symbols=AAPL")
   		// 				.subscribe((res:any)=>console.log(res))
   		var limit = 2;
-  		$(".single-checkbox").on('change', function(evt) {
-		   if($(this).siblings(':checked').length >= limit) {
-		       this.checked = false;
+  		$(".single-checkbox").on('change', (evt) => {
+  		   var element: any = evt.target;
+		   if($(element).siblings(':checked').length >= limit) {
+		       element.checked = false;
 		   }
 		});
   }
