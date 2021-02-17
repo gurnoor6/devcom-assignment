@@ -38,7 +38,7 @@ export class SalesOverviewGrapComponent implements OnInit {
 				showGrid: true,
 				offset: 40
 			},
-			height: 360
+			height: 360,
 		},
 
 		responsiveOptions: [
@@ -59,34 +59,16 @@ export class SalesOverviewGrapComponent implements OnInit {
   constructor(private api: ApiService) { }
 
   ngOnInit(): void {
-  		// this.api.get("http://api.marketstack.com/v1/eod?access_key=4f0a067e31a165f5768cbfce1b9c3760&symbols=AAPL")
-  		// 				.subscribe((res:any)=>console.log(res))
-  		var limit = 2;
-  		$(".single-checkbox").on('change', (evt) => {
-  		   var element: any = evt.target;
-		   if($(element).siblings(':checked').length >= limit) {
-		       element.checked = false;
-		   }
-		});
   }
 
-  getArray(){
-
-  }
 
 
   getData(){
-  	var items: any = $(".single-checkbox:checked");
-  	if(items.length < 2){
-  		this.error = true;
-  		return;
-  	}
-  	this.error = false;
+  	var items:any = ['AAPL','AMZN','GOOG','GOOGL'];
   	var data;
   	var series_data:any = this.barChart1.data.series;
-  	for(let i = 0;i<=1;i++){
-  		this.value[i] = items[i].value;
-  		this.api.get(`http://api.marketstack.com/v1/eod?access_key=4f0a067e31a165f5768cbfce1b9c3760&symbols=${items[i].value}`)
+  	for(let i = 0;i<=3;i++){
+  		this.api.get(`http://api.marketstack.com/v1/eod?access_key=4f0a067e31a165f5768cbfce1b9c3760&symbols=${items[i]}`)
 	  	.subscribe((res:any) => {
 	  		data = res.data;
 			var x: any[] = [];
@@ -102,7 +84,7 @@ export class SalesOverviewGrapComponent implements OnInit {
 	  	});
   	}
   
-
   }
 
-}
+ }
+
