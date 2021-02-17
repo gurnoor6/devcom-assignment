@@ -13,6 +13,6 @@ Demo:
 <br>
 <img src="screenshots/data.gif" width=443 height=358>
 <img src="screenshots/chart.gif" width=443 height=358>
+<img src="screenshots/main.gif" width=1152 height=500>
 <img src="screenshots/screenshot1.png" width=1152 height=540>
 <img src="screenshots/screenshot2.png" width=1152 height=540>
-<img src="screenshots/screenshot3.png" width=1152 height=540>
