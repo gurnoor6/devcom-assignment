@@ -1,6 +1,6 @@
 # DevCom Assignment
 
-Created using theme from [here](https://www.wrappixel.com/templates/materialpro-angular-lite/#comparison).
+Created using theme from [here](https://www.wrappixel.com/templates/materialpro-angular-lite/#comparison). Api used is [this](https://marketstack.com/documentation)
 
 Requirements (Not completely sure if there are any other dependencies, but this is what is on my system and it works) <br>
 Angular CLI: 10.0.1 <br>
